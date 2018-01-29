@@ -952,6 +952,7 @@ public class InAppBrowser extends CordovaPlugin {
                 // Add our webview to our main view/layout
                 RelativeLayout webViewLayout = new RelativeLayout(cordova.getActivity());
                 //webViewLayout.addView(inAppWebView);
+                thatWebView.loadUrl(url);
                 webViewLayout.addView(thatWebView.getView());
                 main.addView(webViewLayout);
 
