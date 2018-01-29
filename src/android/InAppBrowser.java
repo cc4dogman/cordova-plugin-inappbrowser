@@ -134,6 +134,14 @@ public class InAppBrowser extends CordovaPlugin {
     private boolean showFooter = false;
     private String footerColor = "";
 
+
+    /**
+     * Called after plugin construction and fields have been initialized.
+     */
+    protected void pluginInitialize() {
+        LOG.setLogLevel(LOG.INFO);
+    }
+
     /**
      * Executes the request and returns PluginResult.
      *
