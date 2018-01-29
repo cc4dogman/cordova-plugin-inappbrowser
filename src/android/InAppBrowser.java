@@ -1110,7 +1110,9 @@ public class InAppBrowser extends CordovaPlugin {
                     LOG.e(LOG_TAG, "Error sending sms " + url + ":" + e.toString());
                 }
             }
-            return false;
+            LOG.e(LOG_TAG, "load webview class= " + this.webView.getClass().getCanonicalName() + " url=" + url);
+            this.webView.loadUrl(url);
+            return true;
         }
 
 
